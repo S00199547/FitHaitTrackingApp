@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <!-- Define your notification title -->
+    <string name="notification_title">Don not forget to track your health habits today</string>
+
+</resources>

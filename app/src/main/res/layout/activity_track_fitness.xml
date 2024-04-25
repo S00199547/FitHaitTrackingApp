@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7E7C7C"
+    tools:context=".TrackFitnessActivity">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="277dp"
+        android:layout_height="47dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:text="FitnessBoard"
+        android:textAlignment="center"
+        android:textColor="#FDF8F8"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="391dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="56dp"
+        android:divider="@android:color/black"
+        android:dividerHeight="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/btnExercise"
+        android:layout_width="165dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="8dp"
+        android:background="#000000"
+        android:backgroundTint="#504E4E"
+        android:text="Track Exercise"
+        android:textAlignment="center"
+        android:textColor="#FDF8F8"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listView1" />
+
+    <TextView
+        android:id="@+id/tvExercisePercentage"
+        android:layout_width="138dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="19dp"
+        android:text="Exercise: 0%"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnExercise"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listView1" />
+
+    <Button
+        android:id="@+id/btnMeditation"
+        android:layout_width="196dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="20dp"
+        android:background="#050505"
+        android:backgroundTint="#504E4E"
+        android:text="Track Meditation"
+        android:textAlignment="center"
+        android:textColor="#FDF8F8"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.925"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listView3" />
+
+    <ListView
+        android:id="@+id/listView3"
+        android:layout_width="369dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="60dp"
+        android:divider="@android:color/black"
+        android:dividerHeight="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnExercise" />
+
+    <TextView
+        android:id="@+id/tvMeditationPercentage"
+        android:layout_width="123dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:text="Meditation: 0%"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnMeditation"
+        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listView3" />
+
+    <Button
+        android:id="@+id/btnbackt"
+        android:layout_width="122dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:background="#050505"
+        android:backgroundTint="#504E4E"
+        android:text="back"
+        android:textAlignment="center"
+        android:textColor="#FDF8F8"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMeditation"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <Button
+        android:id="@+id/btntip1"
+        android:layout_width="78dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="64dp"
+        android:background="#0B0A0A"
+        android:text="Tips"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toEndOf="@+id/btnbackt" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

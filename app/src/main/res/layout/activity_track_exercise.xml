@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7E7C7C"
+    tools:context=".TrackExerciseActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:text="Track Exercise"
+        android:textColor="#FFFDFD"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etExerciseDate"
+        android:layout_width="241dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="36dp"
+        android:hint="Date"
+        android:textColorHint="#FFFDFD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.417"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/etExerciseTime"
+        android:layout_width="239dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="28dp"
+        android:hint="Time"
+        android:textColorHint="#FFFDFD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etExerciseDate" />
+
+    <EditText
+        android:id="@+id/etExerciseDuration"
+        android:layout_width="248dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="32dp"
+        android:hint="Duration (minutes)"
+        android:inputType="number"
+        android:textColorHint="#FFFDFD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etExerciseTime" />
+
+    <EditText
+        android:id="@+id/etExerciseType"
+        android:layout_width="241dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="36dp"
+        android:hint="Exercise Type"
+        android:textColorHint="#FFFDFD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.376"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etExerciseDuration" />
+
+    <Button
+        android:id="@+id/btnSaveExercise"
+        android:layout_width="156dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="176dp"
+        android:background="#000000"
+        android:backgroundTint="#504E4E"
+        android:text="Save Exercise Entry"
+        android:textColor="#FFFDFD"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.755"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etExerciseType"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnbackt"
+        android:layout_width="131dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="52dp"
+        android:background="#050505"
+        android:backgroundTint="#504E4E"
+        android:text="Back"
+        android:textColor="#FFFDFD"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnSaveExercise"
+        app:layout_constraintHorizontal_bias="0.654"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etExerciseType" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

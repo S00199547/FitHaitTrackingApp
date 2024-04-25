@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7E7C7C"
+    tools:context=".TrackHabithealthActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="316dp"
+        android:layout_height="56dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="48dp"
+        android:text="Habit*Heallthboard"
+        android:textColor="#FDF8F8"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/btnSleep"
+        android:layout_width="189dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="12dp"
+        android:background="#040404"
+        android:backgroundTint="#504E4E"
+        android:text="Track Sleep"
+        android:textAlignment="center"
+        android:textColor="#FDF8F8"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listView2" />
+
+    <ListView
+        android:id="@+id/listView2"
+        android:layout_width="358dp"
+        android:layout_height="181dp"
+        android:layout_marginTop="20dp"
+        android:divider="@android:color/black"
+        android:dividerHeight="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/tvSleepPercentage"
+        android:layout_width="123dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:text="Sleep: 0%"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listView2" />
+
+
+    <Button
+        android:id="@+id/btnHydration"
+        android:layout_width="178dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="20dp"
+        android:background="#040404"
+        android:backgroundTint="#504E4E"
+        android:text="Track Hydration"
+        android:textAlignment="center"
+        android:textColor="#FDF8F8"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvHydrationPercentage"
+        app:layout_constraintTop_toBottomOf="@+id/listView4" />
+
+    <ListView
+        android:id="@+id/listView4"
+        android:layout_width="357dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="8dp"
+        android:divider="@android:color/black"
+        android:dividerHeight="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSleep" />
+
+    <TextView
+        android:id="@+id/tvHydrationPercentage"
+        android:layout_width="127dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="20dp"
+        android:text="Hydration: 0%"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listView4" />
+
+    <Button
+        android:id="@+id/btnbackt"
+        android:layout_width="134dp"
+        android:layout_height="49dp"
+        android:background="#050505"
+        android:backgroundTint="#504E4E"
+        android:text="back"
+        android:textAlignment="center"
+        android:textColor="#FDF8F8"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHydration"
+        app:layout_constraintVertical_bias="0.311" />
+
+    <Button
+        android:id="@+id/btntip2"
+        android:layout_width="96dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="36dp"
+        android:background="#070707"
+        android:text="Tips"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintStart_toEndOf="@+id/btnbackt"
+        app:layout_constraintTop_toBottomOf="@+id/btnHydration" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
