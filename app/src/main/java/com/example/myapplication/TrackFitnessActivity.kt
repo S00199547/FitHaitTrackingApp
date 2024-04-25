@@ -29,7 +29,6 @@ class TrackFitnessActivity : AppCompatActivity() {
     private lateinit var tvMeditationPercentage: TextView
 
     private lateinit var btnback: Button
-
     private lateinit var btntip1: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,8 +53,6 @@ class TrackFitnessActivity : AppCompatActivity() {
 
 
         tvExercisePercentage = findViewById(R.id.tvExercisePercentage)
-        //tvHydrationPercentage = findViewById(R.id.tvHydrationPercentage)
-        //  tvSleepPercentage = findViewById(R.id.tvSleepPercentage)
         tvMeditationPercentage = findViewById(R.id.tvMeditationPercentage)
 
 
@@ -68,7 +65,7 @@ class TrackFitnessActivity : AppCompatActivity() {
             startActivity(Intent(this, TrackMeditationActivity::class.java))
         }
 
-        // Retrieve exercise, sleep, meditation, and hydration entries
+        // Retrieve exercise, meditation,entries
         val dbHelper = DatabaseHelper(this)
         val exerciseEntries = dbHelper.getAllExerciseEntries()
         val meditationEntries = dbHelper.getAllMeditationEntries()
@@ -125,7 +122,7 @@ class TrackFitnessActivity : AppCompatActivity() {
         }
 
 
-
+        //Exercise
         listView1.setOnItemClickListener { parent, view, position, id ->
             val exerciseEntryToDelete = exerciseEntries[position] // Get exercise entry from the list
 
@@ -143,6 +140,8 @@ class TrackFitnessActivity : AppCompatActivity() {
                 Toast.makeText(this, "Failed to delete exercise entry", Toast.LENGTH_SHORT).show()
             }
         }
+
+        //Meditation
         // Set click listener for delete button
         listView3.setOnItemClickListener { parent, view, position, id ->
             val meditationEntryToDelete = meditationEntries[position] // Get meditation entry from the list

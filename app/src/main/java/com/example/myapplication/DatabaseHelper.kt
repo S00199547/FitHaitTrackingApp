@@ -11,7 +11,6 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
 
     companion object {
 
-
         private const val DATABASE_VERSION = 1
         private const val DATABASE_NAME = "HealthTrackerDB"
 
@@ -27,10 +26,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         const val COLUMN_TIME = "time"
         const val COLUMN_DURATION = "duration"
 
-        // Exercise table column names
         const val COLUMN_EXERCISE_TYPE = "exercise_type"
-
-        // Define other column names for sleep, meditation, and hydration tables
         const val COLUMN_AMOUNT = "amount"
     }
 

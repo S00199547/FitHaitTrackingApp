@@ -31,7 +31,6 @@ class TrackHabithealthActivity : AppCompatActivity() {
 
 
     private lateinit var btnback: Button
-
     private lateinit var btntip2: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,13 +52,12 @@ class TrackHabithealthActivity : AppCompatActivity() {
         listView4 = findViewById(R.id.listView4)
 
 
-        //tvExercisePercentage = findViewById(R.id.tvExercisePercentage)
+
         tvHydrationPercentage = findViewById(R.id.tvHydrationPercentage)
         tvSleepPercentage = findViewById(R.id.tvSleepPercentage)
-        //  tvMeditationPercentage = findViewById(R.id.tvMeditationPercentage)
+
 
         // Set click listeners for buttons
-
         btnSleep.setOnClickListener {
             startActivity(Intent(this, TrackSleepActivity::class.java))
         }
@@ -70,7 +68,6 @@ class TrackHabithealthActivity : AppCompatActivity() {
         }
 
         // Retrieve  sleep,  hydration entries
-
         val dbHelper = DatabaseHelper(this)
         val sleepEntries = dbHelper.getAllSleepEntries()
         val hydrationEntries = dbHelper.getAllHydrationEntries()
@@ -129,6 +126,7 @@ class TrackHabithealthActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //Sleep
         // Set click listener for delete button
         listView2.setOnItemClickListener { parent, view, position, id ->
             val sleepEntryToDelete = sleepEntries[position] // Get sleep entry from the list
@@ -147,6 +145,8 @@ class TrackHabithealthActivity : AppCompatActivity() {
                 Toast.makeText(this, "Failed to delete sleep entry", Toast.LENGTH_SHORT).show()
             }
         }
+
+        //Hydration
         // Set click listener for delete button
         listView4.setOnItemClickListener { parent, view, position, id ->
             val hydrationEntryToDelete =

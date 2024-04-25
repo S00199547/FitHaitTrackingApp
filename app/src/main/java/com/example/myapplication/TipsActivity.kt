@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
 class TipsActivity : AppCompatActivity() {
+
     private lateinit var btnback: Button
     override fun onCreate(savedInstanceState: Bundle?) {
 
