@@ -73,7 +73,7 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Let s Track"
+        android:text="Let's Track"
         android:textAlignment="center"
         android:textColor="#FDF8F8"
         android:textSize="24sp"

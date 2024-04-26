@@ -170,46 +170,4 @@ class TrackHabithealthActivity : AppCompatActivity() {
         }
 
     }
-
-    private fun scheduleReminder() {
-        // Create an intent for the reminder
-        val reminderIntent = Intent(this, ReminderService::class.java)
-        val pendingIntent = PendingIntent.getService(
-            this,
-            0,
-            reminderIntent,
-            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE // Add the FLAG_IMMUTABLE flag
-        )
-
-        // Set the alarm to trigger at 10:00 AM
-        val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        val triggerTimeMillis = calculateTriggerTime()
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            alarmManager.setExactAndAllowWhileIdle(
-                AlarmManager.RTC_WAKEUP,
-                triggerTimeMillis,
-                pendingIntent
-            )
-        } else {
-            alarmManager.setExact(
-                AlarmManager.RTC_WAKEUP,
-                triggerTimeMillis,
-                pendingIntent
-            )
-        }
-    }
-
-    // Method to calculate the trigger time for the reminder
-    private fun calculateTriggerTime(): Long {
-        // Implement the logic to calculate the trigger time (e.g., 10:00 AM every day)
-        // For demonstration, let's set it to 10:00 AM for the next day
-        val calendar = Calendar.getInstance().apply {
-            timeInMillis = System.currentTimeMillis()
-            set(Calendar.HOUR_OF_DAY, 10)
-            set(Calendar.MINUTE, 0)
-            set(Calendar.SECOND, 0)
-            add(Calendar.DAY_OF_YEAR, 1) // Next day
-        }
-        return calendar.timeInMillis
-    }
 }

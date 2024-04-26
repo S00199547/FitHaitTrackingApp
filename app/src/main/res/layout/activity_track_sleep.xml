@@ -55,7 +55,7 @@
         android:layout_width="274dp"
         android:layout_height="56dp"
         android:layout_marginTop="40dp"
-        android:hint="Duration (in minutes)"
+        android:hint="Duration (minutes)"
         android:inputType="number"
         android:textColorHint="#FDF8F8"
         app:layout_constraintEnd_toEndOf="parent"
