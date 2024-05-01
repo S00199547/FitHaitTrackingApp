@@ -1,11 +1,7 @@
 package com.example.myapplication
 
-import android.app.AlarmManager
-import android.app.PendingIntent
-import android.content.Context
+
 import android.content.Intent
-import android.icu.util.Calendar
-import android.os.Build
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -75,13 +71,13 @@ class TrackFitnessActivity : AppCompatActivity() {
 
         // Calculate percentage completion for exercise tracking (assuming 30 minutes goal)
         val exerciseGoal = 30 // 30 minutes goal
-        val exerciseTotalMinutes = exerciseEntries.sumBy { it.duration }
+        val exerciseTotalMinutes = exerciseEntries.sumOf { it.duration }
         val exercisePercentage = (exerciseTotalMinutes.toDouble() / exerciseGoal) * 100
 
 
         // Calculate percentage completion for meditation tracking (assuming 20 minutes goal)
         val meditationGoal = 20 // 20 minutes goal
-        val meditationTotalMinutes = meditationEntries.sumBy { it.duration }
+        val meditationTotalMinutes = meditationEntries.sumOf { it.duration }
         val meditationPercentage = (meditationTotalMinutes.toDouble() / meditationGoal) * 100
 
 
@@ -130,7 +126,6 @@ class TrackFitnessActivity : AppCompatActivity() {
                 exerciseEntries[position] // Get exercise entry from the list
 
             // Delete exercise entry from the database
-            val dbHelper = DatabaseHelper(this)
             val deletedRows = dbHelper.deleteExerciseEntry(exerciseEntryToDelete.id)
 
             if (deletedRows > 0) {
@@ -152,7 +147,6 @@ class TrackFitnessActivity : AppCompatActivity() {
                 meditationEntries[position] // Get meditation entry from the list
 
             // Delete meditation entry from the database
-            val dbHelper = DatabaseHelper(this)
             val deletedRows = dbHelper.deleteMeditationEntry(meditationEntryToDelete.id)
 
             if (deletedRows > 0) {

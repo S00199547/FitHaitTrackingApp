@@ -31,6 +31,7 @@ class TrackExerciseActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }*/
+        checkExerciseGoal()
         etExerciseDate = findViewById(R.id.etExerciseDate)
         etExerciseTime = findViewById(R.id.etExerciseTime)
         etExerciseDuration = findViewById(R.id.etExerciseDuration)
@@ -101,7 +102,6 @@ class TrackExerciseActivity : AppCompatActivity() {
     private fun checkExerciseGoal() {
         if (totalExerciseDuration >= exerciseGoal) {
             Toast.makeText(this, "Congratulations! You've reached your exercise goal.", Toast.LENGTH_SHORT).show()
-            // You can add additional actions here, such as displaying a congratulatory message or setting new goals
         }
     }
 

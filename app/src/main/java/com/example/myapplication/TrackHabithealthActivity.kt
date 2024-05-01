@@ -1,11 +1,7 @@
 package com.example.myapplication
 
-import android.app.AlarmManager
-import android.app.PendingIntent
-import android.content.Context
+
 import android.content.Intent
-import android.icu.util.Calendar
-import android.os.Build
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -75,13 +71,13 @@ class TrackHabithealthActivity : AppCompatActivity() {
 
         // Calculate percentage completion for sleep tracking (assuming 8 hours goal)
         val sleepGoal = 8 * 60 // 8 hours in minutes
-        val sleepTotalMinutes = sleepEntries.sumBy { it.duration }
+        val sleepTotalMinutes = sleepEntries.sumOf { it.duration }
         val sleepPercentage = (sleepTotalMinutes.toDouble() / sleepGoal) * 100
 
 
         // Calculate percentage completion for hydration tracking (assuming 8 glasses goal)
         val hydrationGoal = 8 // 8 glasses goal
-        val hydrationTotalGlasses = hydrationEntries.sumBy { it.amount }
+        val hydrationTotalGlasses = hydrationEntries.sumOf { it.amount }
         val hydrationPercentage = (hydrationTotalGlasses.toDouble() / hydrationGoal) * 100
 
 
@@ -132,7 +128,6 @@ class TrackHabithealthActivity : AppCompatActivity() {
             val sleepEntryToDelete = sleepEntries[position] // Get sleep entry from the list
 
             // Delete sleep entry from the database
-            val dbHelper = DatabaseHelper(this)
             val deletedRows = dbHelper.deleteSleepEntry(sleepEntryToDelete.id)
 
             if (deletedRows > 0) {
@@ -153,7 +148,6 @@ class TrackHabithealthActivity : AppCompatActivity() {
                 hydrationEntries[position] // Get hydration entry from the list
 
             // Delete hydration entry from the database
-            val dbHelper = DatabaseHelper(this)
             val deletedRows = dbHelper.deleteHydrationEntry(hydrationEntryToDelete.id)
 
             if (deletedRows > 0) {

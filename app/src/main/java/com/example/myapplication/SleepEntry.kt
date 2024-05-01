@@ -7,3 +7,8 @@ data class SleepEntry(
     val time: String,
     val duration: Int
 )
+{
+    override fun toString(): String {
+        return "Data:$date - Time:$time Duration:-$duration"
+    }
+}

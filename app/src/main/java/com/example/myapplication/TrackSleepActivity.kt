@@ -58,12 +58,6 @@ class TrackSleepActivity : AppCompatActivity() {
 
             if (success) {
                 Toast.makeText(this, "Sleep entry saved successfully!", Toast.LENGTH_SHORT).show()
-                // Calculate percentage completion after saving sleep entry
-                val sleepGoalMinutes = 8 * 60 // 8 hours in minutes
-                val totalSleepMinutes = dbHelper.getTotalSleepMinutes() // Implement this method in DatabaseHelper
-                val sleepPercentage = (totalSleepMinutes.toDouble() / sleepGoalMinutes) * 100
-                // Pass sleepPercentage to TrackPageActivity and update the UI accordingly
-                // You may need to use startActivityForResult and onActivityResult to communicate between activities
                 clearInputFields()
             } else {
                 Toast.makeText(this, "Failed to save sleep entry.", Toast.LENGTH_SHORT).show()
